@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+    <div class="game">
+        <div class="name">Typing Speed Test Game</div>
+        <div class="container">
+            <div class="checkbox">
+                <span class="choose">choose the level :</span>
+                <input type="radio" name="lvl" id="eazy" class="radio-check">
+                <label for="eazy" class="Easy">Eazy</label> <span>-</span>
+                <input type="radio" name="lvl" id="normal" class="radio-check" checked>
+                <label for="normal" class="Normal">Normal</label> <span>-</span>
+                <input type="radio" name="lvl" class="radio-check" id="hard">
+                <label for="hard" class="Hard">Hard</label>
+            </div>
+            <div class="best-score">best Score: <span class="best">0</span></div>
+            <div class="message">
+                You Are Playing On
+                <span class="lvl"></span>level & You Have <span class="seconds"></span> Seconds To Type Word
+            </div>
+            <button class="start">Start Playing</button>
+            <div class="the-word"></div>
+            <input type="text" class="input">
+            <div class="upcoming-words">
+            </div>
+            <div class="control">
+                <div class="time">Time Left: <span></span> Seconds</div>
+                <div class="score">Score: <span class="got">0</span> From <span class="total"></span></div>
+            </div>
+            <div class="finish"></div>
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

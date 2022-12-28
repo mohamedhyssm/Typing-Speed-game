@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$mainColor: #2196f3;
+$secondColor: #009688;
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin font($size, $weigth) {
+    font-size: $size;
+    font-weight: $weigth;
+}
+
+
+// game name and container
+.game {
+    background-color: #eee;
+    min-height: 100vh;
+
+    .name {
+        background-color: $mainColor;
+        color: white;
+
+        @include font(25px, bold);
+
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+// checkbox
+.game .container .checkbox {
+    width: 100%;
+    margin: 10px 0 0;
+    text-align: center;
+    padding: 10px;
+
+    .choose {
+        color: $secondColor;
+    }
+
+    span {
+
+        font-size: 20px;
+    }
+
+    .radio-check {
+        appearance: none;
+
+        &:checked+label {
+            color: $mainColor;
+        }
+    }
+
+    label {
+        font-size: 20px;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+
+.game .container .best-score {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+
+    font-size: 20px;
+
+    color: $secondColor;
+
+    .best {
+        font-size: 20px;
+        color: $mainColor;
+    }
+}
+
+// message and button start
+.game .container {
+    .message {
+        background-color: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 6px;
+        text-align: center;
+
+        span {
+            font-weight: bold;
+            color: $secondColor;
+
+            &::before {
+                content: " { ";
+            }
+
+            &::after {
+                content: " } ";
+            }
+        }
+    }
+
+    .start {
+        width: 100%;
+        background-color: $secondColor;
+        color: white;
+        text-align: center;
+
+        @include font(20px, bold);
+
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+// the word and input
+.game .container {
+    .the-word {
+        text-align: center;
+        @include font(60px, bold);
+        color: $mainColor;
+        user-select: none; // new
+    }
+
+    .input {
+        display: block;
+        width: 100%;
+        margin: 15px auto;
+
+        padding: 15px;
+        border: 3px solid $mainColor;
+        border-radius: 6px;
+        caret-color: $mainColor;
+        font-size: 20px;
+        text-align: center;
+        text-transform: capitalize;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+// upcoming-words
+.game .container .upcoming-words {
+    background-color: white;
+    margin: 15px 0;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+        background-color: $mainColor;
+        color: white;
+        font-weight: bold;
+        margin: 4px;
+        padding: 7.5px 15px;
+        border-radius: 10px;
+    }
+
+}
+
+.game .container {
+    .control {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 15px;
+
+        span {
+            @include font(16px, bold);
+            color: $secondColor;
+        }
+    }
+}
+
+.finish {
+    @include font(40px, bold);
+    text-align: center;
+
+    .good {
+        color: $mainColor;
+    }
+
+    .bad {
+        color: red;
+    }
+}
+
+.try-again {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
